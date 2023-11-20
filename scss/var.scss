@@ -1,0 +1,27 @@
+@import 'variables';
+
+body{
+    background-color: $navbar-dark-active-color;
+}
+
+.block {
+    @include transform(block)
+}
+
+.message {
+    @extend %inherit;
+}
+
+div {
+    // color: $navbar-dark-color;
+    background-color: $hardtextcolor;
+}
+
+.aside {
+
+    background-color: $navbar-dark-brand-color;
+
+}
+nav{
+    height: 75px;
+}

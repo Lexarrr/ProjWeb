@@ -1,60 +1,121 @@
-html, body{
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Work+Sans:wght@300&display=swap'); */
+
+html,
+body {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: "Roboto-Regular";
+    src: url("../font/Roboto-Regular.ttf"); */
 }
 
-.imglogo{
-    /* margin: 0 20px; */
+.imglogo {
     float: left;
     mix-blend-mode: multiply;
-    background-image: none;
-    
 
 }
 
-.cont{
-display: flex;
-flex-wrap: wrap;
-text-align: center;
-line-height: 100px;
+.navbar-brand {
+    float: left;
+    margin: 10px 10px 0 70px;
 
 }
 
-.aside, 
-.main{
+.logname {
+
+    margin: 25px 50px 0 0;
+}
+
+.navbar-nav {
+    justify-content: center;
+    text-align: center;
+
+
+}
+
+.nav-item {
+    margin-left: 70px;
+    justify-items: center;
+    justify-content: space-between;
+}
+
+.cont {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 65px;
+}
+
+
+.aside,
+.main {
     width: 100%;
+    height: 60px;
+    float: left;
 }
 
-.aside{
-    background-color: #666633 ;
-}
-.main{
+.aside {
     background-color: #ffffff;
+
+    float: left;
+    width: 50%;
+    /* text-align: center; */
+
+}
+
+.main {
+    background-color: #ffffff;
+    width: 50%;
+
+
+}
+
+.adr,
+.tel {
+    float: left;
+    stroke: none;
+
+}
+
+.tel {
+    margin-left: 30px;
+
 }
 
 /* for ipad */
-@media (min-width: 992px){
-    .aside{
-        flex: 0 0 35%;
-        max-width: 35%;
+/* @media (min-width: 992px) {
+    .aside {
+        flex: 0 0 40%;
+        max-width: 40%;
         order: 2;
     }
 
-    .main{
-        flex: 0 0 65%;
-        max-width: 65%;
+    .main {
+        flex: 0 0 60%;
+        max-width: 60%;
         order: 1;
-
     }
+} */
+
+.adr-menu {
+    display: none;
 }
-/*
-nav {
-    display: flex;
-    align-items: center;
-    /* background-color: antiquewhite; 
-    padding: 0 1rem; /*1rem - шрифт корневого элемента
-}*/
+
+.ham {
+    width: 30px;
+    height: 3px;
+    background-color: #252a2e;
+    margin: 5px;
+    position: relative;
+}
+
+.ham::after,
+.ham::before {
+    background-color: #252a2e;
+    display: block;
+    content: "\260E";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 
 .hamburger-menu {
     border: 2px solid rgb(149, 146, 135);
@@ -66,10 +127,10 @@ nav {
 .hamburger {
     width: 30px;
     height: 3px;
-    /* background-color: #252a2e; */
+    background-color: #252a2e;
     margin: 5px;
     position: relative;
-    
+
 }
 
 .hamburger::after,
@@ -78,8 +139,8 @@ nav {
     display: block;
     content: "";
     position: absolute;
-    /* width: 100%;
-    height: 100%; */
+    width: 100%;
+    height: 100%;
 }
 
 .hamburger::after {
@@ -90,47 +151,18 @@ nav {
     top: 7px;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links li a {
-    /* display: inline-block; */
-    color: #333;
-    text-decoration: none;
-    padding: 1rem;
-}
-
-.nav-links li a:hover {
-    color: black;
-    background-color: #CCCC99;
-}
-
-.nav-links.show-menu {
-    position: absolute;
-    top: 50px;
-    display: block;
-    background-color: antiquewhite;
-    cursor: pointer;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .hamburger-menu {
         display: block;
         height: 30px;
-        padding-top: 15px;
+        padding-top: 7px;
 
     }
 
-    .nav-links {
-        display: none;
-    }
+    .aside {
+        display: block;
+        height: 30px;
+        padding-top: 7px;
 
-    .nav-links.show-menu li a {
-        width: 55px;
-        padding: .6rem;
     }
 }

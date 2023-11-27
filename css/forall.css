@@ -4,112 +4,50 @@ html,
 body {
     margin: 0;
     padding: 0;
-    /* font-family: "Roboto-Regular";
-    src: url("../font/Roboto-Regular.ttf"); */
+
 }
 
 .imglogo {
-    float: left;
+    /* float: left; */
     mix-blend-mode: multiply;
+    position: relative;
 
 }
 
-.navbar-brand {
-    float: left;
-    margin: 10px 10px 0 70px;
 
-}
-
-.logname {
-
-    margin: 25px 50px 0 0;
-}
-
-.navbar-nav {
-    justify-content: center;
-    text-align: center;
-
-
-}
 
 .nav-item {
-    margin-left: 70px;
+    margin-left: 60px;
     justify-items: center;
     justify-content: space-between;
 }
 
-.cont {
-    display: flex;
-    flex-wrap: wrap;
-    line-height: 65px;
+.adr-tel {
+    margin-left: 100px;
 }
 
-
-.aside,
-.main {
-    width: 100%;
-    height: 60px;
-    float: left;
-}
-
-.aside {
-    background-color: #ffffff;
-
-    float: left;
-    width: 50%;
-    /* text-align: center; */
-
-}
-
-.main {
-    background-color: #ffffff;
-    width: 50%;
-
-
-}
-
-.adr,
-.tel {
-    float: left;
-    stroke: none;
-
-}
-
-.tel {
-    margin-left: 30px;
-
-}
-
-/* for ipad */
-/* @media (min-width: 992px) {
-    .aside {
-        flex: 0 0 40%;
-        max-width: 40%;
-        order: 2;
-    }
-
-    .main {
-        flex: 0 0 60%;
-        max-width: 60%;
-        order: 1;
-    }
-} */
 
 .adr-menu {
     display: none;
+    cursor: pointer;
 }
 
-.ham {
+.card img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+
+}
+
+/* .ham {
     width: 30px;
     height: 3px;
     background-color: #252a2e;
     margin: 5px;
     position: relative;
-}
+} */
 
 .ham::after,
 .ham::before {
-    background-color: #252a2e;
     display: block;
     content: "\260E";
     position: absolute;
@@ -151,18 +89,62 @@ body {
     top: 7px;
 }
 
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav li a {
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.navbar-nav li a:hover {
+    color: #e60013;
+}
+
+.navbar-nav.show-menu {
+    position: absolute;
+    top: 50px;
+    display: block;
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 768px) {
+    .logname {
+        display: none;
+    }
+}
+
 @media (max-width: 992px) {
     .hamburger-menu {
         display: block;
+        float: right;
         height: 30px;
         padding-top: 7px;
 
     }
 
-    .aside {
+    /* .adr-menu {
         display: block;
-        height: 30px;
+        height: 15px;
         padding-top: 7px;
+    } */
 
+    .navbar-nav.show-menu li a {
+        width: 65px;
+        padding: .6rem;
     }
+
+    /* .aside {
+        display: none;
+
+    } */
 }
